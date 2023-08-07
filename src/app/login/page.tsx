@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { toast } from "react-hot-toast/headless";
 import axios from "axios";
+import { Toaster, toast } from "react-hot-toast";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -66,6 +66,7 @@ export default function LoginPage() {
         {loading ? "Logging in.." : "Login"}
       </button>
       <Link href="/signup">Click here to Signup</Link>
+      <Toaster position="bottom-center" reverseOrder={false} />
     </div>
   );
 }
